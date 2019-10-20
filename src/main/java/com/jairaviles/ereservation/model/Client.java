@@ -16,6 +16,7 @@ public class Client {
     private String idClient;
     private String first;
     private String last;
+    @Column(unique = true)
     private String username;
     private String address;
     private String phone;

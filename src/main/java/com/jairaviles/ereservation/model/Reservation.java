@@ -19,6 +19,6 @@ public class Reservation {
     private int totalPeople;
     private String description;
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "idClient")
     private Client client;
 }
