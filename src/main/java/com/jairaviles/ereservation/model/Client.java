@@ -9,6 +9,7 @@ import java.util.Set;
 @Data
 @Entity
 @Table(name = "client")
+@NamedQuery(name = "Client.findByUsername", query="select c from Client c where c.username = ?1")
 public class Client {
     @Id
     @GeneratedValue(generator = "system-uuid")

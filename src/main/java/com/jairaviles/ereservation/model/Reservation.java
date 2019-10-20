@@ -14,7 +14,9 @@ public class Reservation {
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy="uuid2")
     private String idReservation;
+    @Temporal(TemporalType.DATE)
     private Date startDate;
+    @Temporal(TemporalType.DATE)
     private Date endDate;
     private int totalPeople;
     private String description;
