@@ -92,8 +92,8 @@
                         <image>
                             <name>yajairo87/${project.build.finalName}</name>
                             <build>
-                                <from>zulu-openjdk-alpine:11.0.4</from>
-                                <entryPoint>java -Dspring.profiles.active=prod -jar /Users/Jair-MAC/temp/${project.build.finalName}.jar</entryPoint>
+                                <from>azul/zulu-openjdk-alpine:11.0.4</from>
+                                <entryPoint>java -Dspring.profiles.active=prod -jar /Users/Jair-MAC/applications/${project.build.finalName}.jar</entryPoint>
                                 <assembly>
                                     <basedir>/Users/Jair-MAC/temp/</basedir>
                                     <descriptorRef>artifact</descriptorRef>
@@ -101,7 +101,7 @@
                                         <id>assembly</id>
                                         <files>
                                             <file>
-                                                <source>target/${project.build.finalName}</source>
+                                                <source>target/${project.build.finalName}.jar</source>
                                             </file>
                                         </files>
                                     </inline>
