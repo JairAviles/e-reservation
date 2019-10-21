@@ -11,6 +11,7 @@ import java.util.List;
 
 @Repository
 public interface ReservationRepository extends JpaRepository<Reservation, String> {
+    public Reservation findByIdReservation(String idReservation);
 
     @Query("select r from Reservation r where r.startDate =:startDate and r.endDate =:endDate")
     public List<Reservation> findByDateRange(@Param("startDate") Date startDate, @Param("endDate") Date endDate);

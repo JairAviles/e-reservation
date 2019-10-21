@@ -38,8 +38,8 @@ public class ReservationService {
         return this.reservationRepository.findByDateRange(startDate, endDate);
     }
 
-    public Optional<Reservation> findById(String id) {
-        return this.reservationRepository.findById(id);
+    public Reservation findById(String id) {
+        return this.reservationRepository.findByIdReservation(id);
     }
 
     public List<Reservation> findAll() {
