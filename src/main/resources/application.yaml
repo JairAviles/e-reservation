@@ -9,3 +9,6 @@ spring:
       ddl-auto: create-drop
       generate-ddl: true
     show-sql: true
+logging:
+  level:
+    sql: debug
