@@ -41,4 +41,8 @@ public class ReservationService {
     public Optional<Reservation> findById(String id) {
         return this.reservationRepository.findById(id);
     }
+
+    public List<Reservation> findAll() {
+        return this.reservationRepository.findAll();
+    }
 }

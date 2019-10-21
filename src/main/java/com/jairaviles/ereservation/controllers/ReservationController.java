@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -44,5 +45,20 @@ public class ReservationController {
 
             return new ResponseEntity<>(this.reservationService.create(reservation), HttpStatus.CREATED);
         }
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Reservation> findReservationById(@PathVariable("id") String idReservation) {
+        Optional<Reservation> optional = this.reservationService.findById(idReservation);
+        if (optional.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return ResponseEntity.ok(optional.get());
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Reservation>> findAll() {
+        return ResponseEntity.ok(this.reservationService.findAll());
     }
 }
