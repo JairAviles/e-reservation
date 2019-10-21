@@ -93,7 +93,7 @@
                             <name>yajairo87/${project.build.finalName}</name>
                             <build>
                                 <from>azul/zulu-openjdk-alpine:11.0.4</from>
-                                <entryPoint>java -Dspring.profiles.active=prod -jar /Users/Jair-MAC/applications/${project.build.finalName}.jar</entryPoint>
+                                <entryPoint>java -Dspring.profiles.active=prod -jar /Users/Jair-MAC/temp/${project.build.finalName}.jar</entryPoint>
                                 <assembly>
                                     <basedir>/Users/Jair-MAC/temp/</basedir>
                                     <descriptorRef>artifact</descriptorRef>
